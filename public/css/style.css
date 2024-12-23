@@ -1,0 +1,270 @@
+/* public/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0;
+    padding: 40px;
+    
+}
+ul{
+    margin: 5px;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns, each takes 1 fraction of the row */
+    gap: 10px;
+    
+    
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: aqua;
+}
+
+button.upload {
+    padding: 10px 20px;
+    border: 2px solid aqua;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+
+button.manage {
+    padding: 10px 20px;
+    border: 2px solid aqua;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 150px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+}
+
+video {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    
+    
+}
+
+/*upload*/
+
+button#submit{
+    width: 400px;
+    height: 50px;
+    background-color: green;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+input#name{
+    width: 400px;
+    height: 50px;
+    background-color: aqua;
+    color: black;
+}
+
+input#video{
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+    color: black;
+}
+
+input#image{
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+    color: black;
+}
+.form{
+    width: 100%;
+    color: aqua;
+    border: 2px solid aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.back-btn{
+    padding: 10px 20px;
+    border: 2px solid aqua;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+
+
+
+
+video {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    color: aqua;
+    border: 2px solid aqua;
+    
+}
+
+.video-item {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 200px;
+    max-height: 270px;
+    height: 270px;
+    color: black;
+    border: 2px solid aqua;
+    background-color: aqua;
+}
+
+.video-item img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.video-item a {
+    font-size: 15px;
+    color: #007bff;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: 2px solid aqua;
+}
+.video-item h5{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: black;
+    width: 100%;
+    text-decoration: none;
+    width: 100%;
+    background-color: aqua;
+}
+
+.video-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    /* Change grid to 2 columns for smaller screens */
+    ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    /* Adjust button positions */
+    button.upload {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    button.manage {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    /* Form adjusts to screen */
+    .form {
+        width: 80%;
+        margin: 5px 5px;
+    }
+
+    input#name,
+    input#video,
+    input#image {
+        width: 400px;
+    }
+
+    /* Adjust video item sizes */
+    .video-item {
+        height: 250px; /* Set height to 250px */
+        width: 100%; /* Set width to 48% */
+    }
+    .video-item img{
+        object-fit: cover;
+    }
+
+    video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Keep 2 columns even on very small screens */
+    ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+    }
+
+    /* Adjust button positions for smaller screens */
+    button.upload {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    button.manage {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    /* Form adjusts to screen */
+    .form {
+        width: 100%;
+    }
+
+    input#name,
+    input#video,
+    input#image {
+        width: 100%;
+    }
+
+    /* Adjust video item sizes */
+    .video-item {
+        height: 250px; /* Set height to 250px */
+        width: 100%; /* Set width to 48% */
+    }
+    .video-item img{
+        object-fit: cover;
+    }
+
+    video {
+        width: 100%;
+    }
+}

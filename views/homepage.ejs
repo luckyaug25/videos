@@ -1,0 +1,29 @@
+<!-- views/homepage.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Upload</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="/upload"><button class="upload">Upload Video</button></a>
+    <a href="/manage"><button class="manage">Manage</button></a>
+    <h2>Uploaded Videos</h2>
+    <ul>
+      <% videos.forEach(video => { %>
+        <a href="/watch/<%= video.id %>">
+            <li class="video-item">
+                <img src="/images/<%= video.image_filename %>" alt="Thumbnail">
+                <div>
+                  <h5><%= video.name %></h5>
+                </div>
+              </li>
+        </a>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>

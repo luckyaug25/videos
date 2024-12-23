@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Videos</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Manage Uploaded Videos</h1>
+    <ul>
+      <% videos.forEach(video => { %>
+        <li class="video-item">
+          <img src="/images/<%= video.image_filename %>" alt="Thumbnail">
+          <div>
+            <h3><%= video.name %></h3>
+            <form action="/delete/<%= video.id %>" method="POST">
+              <button type="submit" class="delete-btn">Delete</button>
+            </form>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+    <a href="/"><button class="back-btn">Back to Homepage</button></a>
+  </div>
+</body>
+</html>
